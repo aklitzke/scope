@@ -122,10 +122,6 @@ impl slog::Drain for NoGlobalLoggerSet {
            _record: &Record,
            _values: &OwnedKVList)
         -> result::Result<Self::Ok, Self::Err> {
-            #[cfg(not(test))]
-            panic!(
-            "slog-scope: No logger set. Use `slog_scope::set_global_logger` or `slog_scope::scope`."
-            )
         }
 }
 
