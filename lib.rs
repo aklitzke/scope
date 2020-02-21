@@ -122,6 +122,7 @@ impl slog::Drain for NoGlobalLoggerSet {
            _record: &Record,
            _values: &OwnedKVList)
         -> result::Result<Self::Ok, Self::Err> {
+            Ok(())
         }
 }
 
